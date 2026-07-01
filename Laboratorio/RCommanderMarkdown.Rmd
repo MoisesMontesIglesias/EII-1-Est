@@ -1,0 +1,77 @@
+<!-- R Commander Markdown Template -->
+
+Reemplazar con el título principal
+=======================
+
+### moise
+
+### `r as.character(Sys.Date())`
+
+```{r echo=FALSE}
+# incluya este fragmento de código literalmente para especificar las opciones
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, out.width=750, fig.height=8, fig.width=8)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+```{r}
+data(mtcars, package="datasets")
+```
+
+```{r}
+Datos <- read.table("C:/Users/moise/Downloads/datos31.xlsx", header=TRUE, stringsAsFactors=TRUE, sep="", 
+  na.strings="NA", dec=".", strip.white=TRUE)
+```
+
+```{r}
+names(mtcars)
+```
+
+
+```{r}
+save("mtcars", file="C:/Users/moise/Downloads/mtcars.RData")
+```
+
+
+```{r}
+load("C:/Users/moise/Downloads/datos31.xlsx")
+```
+
+
+```{r}
+load("C:/Users/moise/Downloads/datos31.xlsx")
+```
+
+
+```{r}
+load("C:/Users/moise/Downloads/bench.rda")
+```
+
+
+```{r}
+names(bench)
+```
+
+
+```{r}
+save("bench", file="C:/Users/moise/Downloads/bench.RData")
+```
+
+
+```{r}
+bench.size_1000 <- subset(bench, subset=size.B.>=1000)
+```
+
+```{r}
+filtro <- subset(bench.size_1000, subset=(elapsed.s.<1) & (lang != "Python 3"))
+```
+
+```{r}
+filtro <- subset(bench, subset=(elapsed.s.<1) & (lang != "Python 3"))
+```
+
+```{r}
+filtro$cpu.m. <- with(filtro, cpu.s./60)
+```
+
